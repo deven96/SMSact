@@ -2,7 +2,7 @@ import { createDrawerNavigator } from 'react-navigation';
 import { HomeNavigator, SettingsNavigator } from './StackControllers';
 
 const MainNavigator = createDrawerNavigator({
-    Home: {
+    Main: {
       screen:HomeNavigator
     },
   

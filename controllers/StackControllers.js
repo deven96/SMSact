@@ -5,34 +5,29 @@ import HomeScreen from '../views/HomeScreen';
 import SettingsScreen from '../views/SettingsScreen';
 
 
-ToggleConfig = {
-  headerLeft: <HamburgerIcon navigationProps={navigation} />,
-  
-  headerStyle: {
-    backgroundColor: '#FF9800'
-  },
-  headerTintColor: '#fff',
-  }
-}
-
-
-
 const HomeNavigator = createStackNavigator({
     Home: {
       screen: HomeScreen,
       navigationOptions: ({navigation}) => ({
-        title: 'Home',
-        ToggleConfig, })
+        title: 'SMSact',
+        headerLeft: <HamburgerIcon navigationProps={navigation} />,
+        headerStyle: {
+          backgroundColor: '#FF9800'
+            },
+        headerTintColor: '#fff',})
     }
   });
   
-  const SettingsNavigator = createStackNavigator({
+const SettingsNavigator = createStackNavigator({
     Home: {
       screen: SettingsScreen,
       navigationOptions: ({navigation}) => ({
         title: 'Settings',
-        ToggleConfig,
-      })
+        headerLeft: <HamburgerIcon navigationProps={navigation} />,
+        headerStyle: {
+          backgroundColor: '#FF9800'
+            },
+        headerTintColor: '#fff',})
     }
   });
 

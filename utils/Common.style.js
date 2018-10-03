@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 
 
 const MenuStyle = StyleSheet.create({
@@ -21,6 +21,8 @@ const Screens = StyleSheet.create({
         justifyContent: 'center',
       }  
 })
+
+
 
 export {
     MenuStyle,
