@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, Image, Platform } from 'react-native';
 import { createDrawerNavigator,createStackNavigator } from 'react-navigation';
 
 
@@ -62,7 +62,7 @@ class HamburgerIcon extends React.Component{
 const HomeNavigator = createStackNavigator({
   Home: {
     screen: HomeScreen,
-    naivgationOptions: ({navigation}) => ({
+    navigationOptions: ({navigation}) => ({
       title: 'Home',
       headerLeft: <HamburgerIcon navigationProps={navigation} />,
 
@@ -77,7 +77,7 @@ const HomeNavigator = createStackNavigator({
 const SettingsNavigator = createStackNavigator({
   Home: {
     screen: SettingsScreen,
-    naivgationOptions: ({navigation}) => ({
+    navigationOptions: ({navigation}) => ({
       title: 'Settings',
       headerLeft: <HamburgerIcon navigationProps={navigation} />,
 
@@ -90,11 +90,11 @@ const SettingsNavigator = createStackNavigator({
 });
 
 export default App = createDrawerNavigator({
-  HomeStack: {
+  Home: {
     screen:HomeNavigator
   },
 
-  SettingsStack: {
+  Settings: {
     screen: SettingsNavigator
   },
 
@@ -109,5 +109,11 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     marginLeft: 5,
+  },
+  MainContainer: {
+    flex: 1,
+    paddingTop: (Platform.OS) == 'ios' ? 20 : 0,
+    alignItems: 'center',
+    justifyContent: 'center',
   }
 });
