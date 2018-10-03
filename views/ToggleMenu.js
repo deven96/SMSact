@@ -20,3 +20,4 @@ export default class HamburgerIcon extends React.Component{
       )
     }
   }
+
