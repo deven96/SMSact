@@ -12,7 +12,7 @@ export default class SettingsScreen extends React.Component {
      render() {
         return (
           <View style={Screens.MainContainer}>
-            <Text style={{justifyContent: 'center'}}>This is Settings Screen</Text>
+            <Text>This is Settings Screen</Text>
           </View>
         );
       }

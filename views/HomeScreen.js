@@ -12,7 +12,7 @@ export default class HomeScreen extends React.Component {
      render() {
         return (
           <View style={Screens.MainContainer}>
-            <Text style={{justifyContent: 'center'}}>This is Main Screen</Text>
+            <Text>Listening for incoming text</Text>
           </View>
         );
       }
